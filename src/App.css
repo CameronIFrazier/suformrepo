@@ -10,16 +10,26 @@
 }
 
 .wrapper {
+  background-color: var(--Red);
   
   width: 100%;
   height: 100vh; /* 100% of the viewport height */
   display: flex;
-  justify-content: center; /* Centering content horizontally */
-  align-items: center; /* Centering content vertically */
-  position: relative; /* To position the background image */
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.grid-middle{
+  display: grid;
+  grid-template-columns: 500px 500px ;
+  grid-template-rows: 50px 400px;
+  grid-auto-rows: 200px;
+  gap: 1rem;
 }
 
 .bgimage {
+  background-color: transparent;
   position: absolute;
   top: 0;
   left: 0;
@@ -29,11 +39,6 @@
   z-index: -1; /* Places the image behind the content */
 }
 
-.boxcontainer {
-  display: flex;
-  gap: 20px; /* Adds space between the boxes */
-  z-index: 1; /* Ensures the boxes are above the background image */
-}
 
 .box1, .box2 {
 
@@ -46,11 +51,14 @@
 .box1{
   display: block;
   padding: 2rem;
-
+  
+  background-color: transparent;
+  border: none;
 }
 
 .box2{
   display: block;
+  
 }
 
 .header{
@@ -66,36 +74,61 @@
 }
 
 .firstName{
+color: black;
 display: block;
-margin-top: 2rem;
+margin-top: 1.5rem;
 height: 2rem;
 border-radius: .3rem;
+width: 95%;
 }
 
 .lastName{
   display: block;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   height: 2rem;
   border-radius: .3rem;
+  width: 95%;
   }
 
 .email{
   display: block;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   height: 2rem;
   border-radius: .3rem;
+  width: 95%;
 }
 
 .password{
   display: block;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   height: 2rem;
   border-radius: .3rem;
+  width: 95%;
 }
 
 .claim{
   display: block;
-  margin-top: 2rem;
-  width: 100% ;
-  height: 1rem;
+  margin-top: 1.5rem;
+  color: white;
+  border-color: none;
+  width: 97%;
+  height: 2rem;
+  background-color: hsl(154, 59%, 51%) ;
+  border-Radius: .3rem;
+  border: none;
+}
+
+.trialButton{
+ background-color: hsl(248, 32%, 49%);
+color: white;
+border: none;
+border-radius: .3rem;
+}
+
+.lilRedText{
+  color: red;
+  font-size: 11px;
+  justify-content: right;
+  align-items: right;
+  visibility: hidden;
 }
